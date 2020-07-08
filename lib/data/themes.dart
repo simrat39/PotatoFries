@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
 import 'package:potato_fries/widgets/directory.dart';
-import 'package:android_flutter_settings/android_flutter_settings.dart';
 
 final Map<String, dynamic> themeData = {
   'Themes': theme,
@@ -24,19 +22,7 @@ final Map<String, dynamic> theme = {
     'setting_type': 'LockScreenClockPicker',
   },
   'color_bucket_overlay': {
-    'title': 'Theme mode',
-    'icon': Icons.color_lens,
-    'widget': WidgetType.DROPDOWN,
-    'setting_type': SettingType.SYSTEM,
-    'widget_data': {
-      'values': {
-        'package_device_default': 'Default theme',
-        'com.android.dark.darkgray': 'Dark',
-        'com.android.dark.night': 'Night',
-        'com.android.dark.style': 'Style',
-      },
-      'default': 'package_device_default',
-    },
-    'version': '3.1.8',
+    'widget': WidgetType.CUSTOM,
+    'setting_type': 'ThemeSelector',
   },
 };
